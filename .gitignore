@@ -1,0 +1,9 @@
+autominy_ws/devel
+autominy_ws/build
+autominy_ws/src/CMakeLists.txt
+autominy_ws/src/darknet_ros/yolo_network_config/weights/dotmex_yolov3_15000.weights
+autominy_ws/src/darknet_ros/yolo_network_config/weights/yolov2.weights
+autominy_ws/src/darknet_ros/yolo_network_config/weights/yolov2-tiny.weights
+autominy_ws/src/darknet_ros/yolo_network_config/weights/yolov3.weights
+autominy_ws/src/darknet
+
