@@ -5,10 +5,7 @@ Based on the simulator:
 https://github.com/ITAM-Robotica/EK_AutoNOMOS_Sim
 
 ## Required Dependencies
-- [CUDA 11.7](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html) See for example some of these pages:
-		--https://techzizou.com/install-cuda-and-cudnn-on-windows-and-linux/#linux
-		--https://medium.com/geekculture/yolov4-darknet-installation-and-usage-on-your-system-windows-linux-8dec2cea6e81#a59a
-		--https://pjreddie.com/darknet/yolo/
+- [CUDA 11.7](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html) See for example some of these pages: [1](https://techzizou.com/install-cuda-and-cudnn-on-windows-and-linux/#linux), [2](https://medium.com/geekculture/yolov4-darknet-installation-and-usage-on-your-system-windows-linux-8dec2cea6e81#a59a), [3](https://pjreddie.com/darknet/yolo/)
 
 - cuDNN 8
 - [darnet](https://github.com/leggedrobotics/darknet/tree/d22bbf38bd012f13d2b50c8d98149cd4a9889b7a)
