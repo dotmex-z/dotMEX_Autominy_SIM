@@ -14,20 +14,20 @@ https://github.com/ITAM-Robotica/EK_AutoNOMOS_Sim
 ## Building
 -	Clone the repository:
 
-	git clone https://github.com/dotmex-z/dotMEX_Autominy_SIM
+		git clone https://github.com/dotmex-z/dotMEX_Autominy_SIM
 	
 -	Create the darknet repository in dotMEX_Autominy_SIM/src 
 
-	cd dotMEX_Autominy_SIM/src
-	git clone https://github.com/leggedrobotics/darknet/tree/d22bbf38bd012f13d2b50c8d98149cd4a9889b7a
-	cd darknet
+		cd dotMEX_Autominy_SIM/src
+		git clone https://github.com/leggedrobotics/darknet/tree/d22bbf38bd012f13d2b50c8d98149cd4a9889b7a
+		cd darknet
 
 -	I recommend to use gpu and opencv configuration. Edit the Makefile to add the [gpu-architecture](https://developer.nvidia.com/cuda-gpus) and change the lines:
 
-	GPU=1
-	CUDNN=0
-	CUDNN_HALF=0
-	OPENCV=1
+		GPU=1
+		CUDNN=0
+		CUDNN_HALF=0
+		OPENCV=1
 
 -	Then use the [make](https://pjreddie.com/darknet/install/) instruction.
 
@@ -37,10 +37,10 @@ https://github.com/ITAM-Robotica/EK_AutoNOMOS_Sim
 
 -	Finally compile the workspace:
 
-	cd dotMEX_Autominy_SIM/src
-	catkin_init_workspace
-	cd ..
-	catkin_make -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_COMPILER=/usr/bin/gcc-8
+		cd dotMEX_Autominy_SIM/src
+		catkin_init_workspace
+		cd ..
+		catkin_make -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_COMPILER=/usr/bin/gcc-8
 
 	
 
@@ -53,7 +53,5 @@ Don't forget to download the weights. The instructions are in: dotMEX_Autominy_S
 
 	catkin_make -DCMAKE_BUILD_TYPE=Release
 	
-	
--Open 
 	
 
