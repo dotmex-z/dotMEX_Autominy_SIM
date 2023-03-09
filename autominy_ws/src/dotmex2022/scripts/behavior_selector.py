@@ -8,7 +8,7 @@ from darknet_ros_msgs.msg import BoundingBoxes
 from sensor_msgs.msg import LaserScan, Imu
 from std_msgs.msg import Int16, Bool
 
-path_libs = '/home/sherlock1804/dotMEX_Autominy_SIM/autominy_ws/src/dotmex2022/scripts/libs'
+path_libs = '/home/dotmex/dotMEX_Autominy_SIM/autominy_ws/src/dotmex2022/scripts/libs'
 import sys
 sys.path.insert(1, path_libs)
 from line_finder import tip, line_detector
