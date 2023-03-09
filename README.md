@@ -12,28 +12,31 @@ https://github.com/ITAM-Robotica/EK_AutoNOMOS_Sim
 - [dark_net_ros](https://github.com/leggedrobotics/darknet_ros)
 
 ## Building
-Clone the repository:
+-	Clone the repository:
+
 	git clone https://github.com/dotmex-z/dotMEX_Autominy_SIM
 	
-Create the darknet repository in dotMEX_Autominy_SIM/src 
+-	Create the darknet repository in dotMEX_Autominy_SIM/src 
+
 	cd dotMEX_Autominy_SIM/src
 	git clone https://github.com/leggedrobotics/darknet/tree/d22bbf38bd012f13d2b50c8d98149cd4a9889b7a
 	cd darknet
 
-I recommend to use gpu and opencv configuration. Edit the Makefile to add the [gpu-architecture](https://developer.nvidia.com/cuda-gpus) and change the lines:
+-	I recommend to use gpu and opencv configuration. Edit the Makefile to add the [gpu-architecture](https://developer.nvidia.com/cuda-gpus) and change the lines:
 
 	GPU=1
 	CUDNN=0
 	CUDNN_HALF=0
 	OPENCV=1
 
-Then use the [make](https://pjreddie.com/darknet/install/) instruction.
+-	Then use the [make](https://pjreddie.com/darknet/install/) instruction.
 
-Add to the neural network's weights to the dotMEX_Autominy_SIM/autominy_ws/src/darknet_ros/yolo_network_config/weights folder. Choose the file [dotmex_yolov3_15000.weights](https://drive.google.com/drive/folders/1a95cmAPXt_KvZuGdBtEg6sZWuQqUulx1?usp=sharing) 
+-	Add to the neural network's weights to the dotMEX_Autominy_SIM/autominy_ws/src/darknet_ros/yolo_network_config/weights folder. Choose the file [dotmex_yolov3_15000.weights](https://drive.google.com/drive/folders/1a95cmAPXt_KvZuGdBtEg6sZWuQqUulx1?usp=sharing) 
 
-Also edit the file dotMEX_Autominy_SIM/autominy_ws/src/dotmex2022/scripts/behavior_selector.py and change the "path_libs" (line 11) variable correctly.
+-	Also edit the file dotMEX_Autominy_SIM/autominy_ws/src/dotmex2022/scripts/behavior_selector.py and change the "path_libs" (line 11) variable correctly.
 
-Finally compile the workspace:
+-	Finally compile the workspace:
+
 	cd dotMEX_Autominy_SIM/src
 	catkin_init_workspace
 	cd ..
