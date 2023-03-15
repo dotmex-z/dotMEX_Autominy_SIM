@@ -64,7 +64,7 @@ This software was tested on ROS melodic and ROS noetic.
 
 		rosrun dotmex2022 behavior_selector.py
 		
-- - Due to the red light, the car won't move. Move the red light out of the car's camera's visual field. Then you'll see how the car lane-keeps while its speed change; depending on the speed limit signal detected. When the car detects another vehicle in its lane, it will begin the passing maneuver; however, a pedestrian will appear and suddenly it'll stop. Then, move Jhon out of the lane and the car will drive lane-keeping. Finally, when the car is close to the blue cars' formation, send the message:
+- Due to the red light, the car won't move. Move the red light out of the car's camera's visual field. Then you'll see how the car lane-keeps while its speed change; depending on the speed limit signal detected. When the car detects another vehicle in its lane, it will begin the passing maneuver; however, a pedestrian will appear and suddenly it'll stop. Then, move Jhon out of the lane and the car will drive lane-keeping. Finally, when the car is close to the blue cars' formation, send the message:
 
 		rostopic pub -1 /parking std_msgs/Bool "data: true"
 		
