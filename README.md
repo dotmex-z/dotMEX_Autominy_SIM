@@ -44,5 +44,42 @@ This software was tested on ROS melodic and ROS noetic.
 		catkin_make -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_COMPILER=/usr/bin/gcc-8
 
 ## Test	
+-	Modify the .bashrc file to add the following lines with your correct path:
+
+		export GAZEBO_PLUGIN_PATH=:/home/dotmex/dotMEX_Autominy_SIM/autominy_ws/devel/lib
+		export GAZEBO_MODEL_PATH=:/home/dotmex/dotMEX_Autominy_SIM/autominy_ws/src/autonomos_gazebo_simulation/models
+		export GAZEBO_RESOURCE_PATH=:/home/dotmex/dotMEX_Autominy_SIM/autominy_ws/src/autonomos_gazebo_simulation/worlds
+		source /home/dotmex/dotMEX_Autominy_SIM/autominy_ws/devel/setup.bash
+
+- Charge the world on Gazebo using:
+		roslaunch autonomos_gazebo_simulation roscar_city.launch
+
+-	Begin the darnet_ros node. If you want to see detected objects, you can use 'rqt_image_view' and subscribe it to the topic '/darknet_ros/detection_image':
+		roslaunch darknet_ros dotmex_darknet_ros.launch
+		rqt_image_view /darknet_ros/detection_image
+		
+- Begin the behavior_selector node. 
+		rosrun dotmex2022 behavior_selector.py
+		
+- - Due to the red light, the car won't move. Move the red light out of the car's camera's visual field. Then you'll see how the car lane-keeps while its speed change; depending on the speed limit signal detected. When the car detects another vehicle in its lane, it will begin the passing maneuver; however, a pedestrian will appear and suddenly it'll stop. Then, move Jhon out of the lane and the car will drive lane-keeping. Finally, when the car is close to the blue cars' formation, send the message:
+		rostopic pub -1 /parking std_msgs/Bool "data: true"
+		
+With this, the car will parking.
+
+## Citation
+Please, cite us as:
+```
+@inproceedings{gonzalez2022behavior,
+  title={Behavior selector for autonomous vehicles using neural networks},
+  author={Gonz{\'a}lez-Miranda, Oscar and Ibarra-Zannatha, Juan Manuel},
+  booktitle={2022 XXIV Robotics Mexican Congress (COMRob)},
+  pages={31--35},
+  year={2022},
+  organization={IEEE}
+}
+```
+
+
+
 	
 

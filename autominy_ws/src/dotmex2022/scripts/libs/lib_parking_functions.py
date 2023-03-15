@@ -27,19 +27,19 @@ def fit_ransac(R,rmax):
 	return(m,b)
 #**********************************************************************************************************************************
 def steer_control(m,b,th_min):
-	d_ref = 20.0 #25.0 #30.0#45.0
-	Kx = 0.06#0.06
-	Kth = 1.25#1.25 
-	gamma = th_min-(3*np.pi/2)
-	d = abs(b/np.sqrt(m**2+1))
+	d_ref = 25.0 #25.0 #30.0#45.0
+	Kx = 0.06*2.0 #0.06
+	Kth = 1.25*2.0 #1.25 
+	gamma = th_min-(3.0*np.pi/2.0)
+	d = abs(b/np.sqrt(m**2+1.0))
 	ex = (d-d_ref)
 	th = -np.arctan(m) 
-	u = 90-np.arctan(Kx*ex+Kth*th)*(180.0/np.pi) 
+	u = int(90.0-np.arctan(Kx*ex+Kth*th)*(180.0/np.pi))
 	return(u,d)
 #**********************************************************************************************************************************
 def measure_D(r_min,th_min):
 	if (th_min<4.7124):
-		D_est = 2*r_min*np.sin(4.7124-th_min)
+		D_est = 2.0*r_min*np.sin(4.7124-th_min)
 	else: D_est = 0.0
 	return D_est 
 
