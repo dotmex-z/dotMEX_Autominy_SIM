@@ -65,6 +65,9 @@ This software was tested on ROS melodic and ROS noetic.
 
 		rostopic pub -1 /parking std_msgs/Bool "data: true"
 		
+[![Watch the video](https://www.youtube.com/watch?v=2t755lCvivU)
+
+
 ## Citation
 Please, cite us as:
 ```
